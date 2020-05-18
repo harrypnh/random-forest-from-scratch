@@ -1,5 +1,5 @@
 # Random Forest From Scratch
-Random Forest Algorithm written in Python using NumPy and Pandas. Based on the [Decision Tree project](https://github.com/huannpham/decision-tree-from-scratch)
+Random Forest Algorithm written in Python using NumPy and Pandas. Based on the [Decision Tree project](https://github.com/huannpham/decision-tree-from-scratch).
 ## 1. Overview of the Implemention
 
 ## 2. Repository Structure
