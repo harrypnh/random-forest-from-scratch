@@ -130,7 +130,91 @@ Random Forest - Breast Cancer Dataset
 ## 5. Results on UCI Car Evaluation Dataset
 
 ```
+Random Forest - Car Evaluation
+  Maximum bootstrap size (n) is 1209
+  Maximum random subspace size (d) is 6
 
+  Change n, keep other parameters
+  n = 200, d = 5, s = 10, k = 10, maxDepth = 8:
+    accTest = 93.06%, accTrain = 95.29%, buildTime = 0.46s
+  n = 300, d = 5, s = 10, k = 10, maxDepth = 8:
+    accTest = 91.52%, accTrain = 94.04%, buildTime = 0.47s
+  n = 400, d = 5, s = 10, k = 10, maxDepth = 8:
+    accTest = 89.60%, accTrain = 93.47%, buildTime = 0.64s
+  n = 500, d = 5, s = 10, k = 10, maxDepth = 8:
+    accTest = 93.83%, accTrain = 95.78%, buildTime = 0.66s
+  n = 600, d = 5, s = 10, k = 10, maxDepth = 8:
+    accTest = 93.83%, accTrain = 96.69%, buildTime = 0.74s
+  n = 700, d = 5, s = 10, k = 10, maxDepth = 8:
+    accTest = 93.06%, accTrain = 97.19%, buildTime = 0.79s
+  n = 800, d = 5, s = 10, k = 10, maxDepth = 8:
+    accTest = 90.17%, accTrain = 94.79%, buildTime = 0.83s
+  n = 900, d = 5, s = 10, k = 10, maxDepth = 8:
+    accTest = 86.32%, accTrain = 90.57%, buildTime = 0.89s
+  n = 1000, d = 5, s = 10, k = 10, maxDepth = 8:
+    accTest = 93.06%, accTrain = 96.44%, buildTime = 0.97s
+  n = 1100, d = 5, s = 10, k = 10, maxDepth = 8:
+    accTest = 92.87%, accTrain = 97.35%, buildTime = 0.99s
+  n = 1200, d = 5, s = 10, k = 10, maxDepth = 8:
+    accTest = 92.29%, accTrain = 97.68%, buildTime = 1.16s
+
+  Change d, keep other parameters
+  n = 200, d = 1, s = 10, k = 10, maxDepth = 8:
+    accTest = 68.98%, accTrain = 70.47%, buildTime = 0.08s
+  n = 200, d = 2, s = 10, k = 10, maxDepth = 8:
+    accTest = 68.98%, accTrain = 70.72%, buildTime = 0.20s
+  n = 200, d = 3, s = 10, k = 10, maxDepth = 8:
+    accTest = 80.54%, accTrain = 81.97%, buildTime = 0.67s
+  n = 200, d = 4, s = 10, k = 10, maxDepth = 8:
+    accTest = 83.43%, accTrain = 87.26%, buildTime = 0.63s
+  n = 200, d = 5, s = 10, k = 10, maxDepth = 8:
+    accTest = 88.44%, accTrain = 91.32%, buildTime = 0.49s
+  n = 200, d = 6, s = 10, k = 10, maxDepth = 8:
+    accTest = 93.64%, accTrain = 95.37%, buildTime = 0.37s
+
+  Change s, keep other parameters
+  n = 200, d = 5, s = 2, k = 10, maxDepth = 8:
+    accTest = 86.51%, accTrain = 88.42%, buildTime = 0.26s
+  n = 200, d = 5, s = 4, k = 10, maxDepth = 8:
+    accTest = 89.79%, accTrain = 92.80%, buildTime = 0.29s
+  n = 200, d = 5, s = 6, k = 10, maxDepth = 8:
+    accTest = 89.40%, accTrain = 92.80%, buildTime = 0.37s
+  n = 200, d = 5, s = 8, k = 10, maxDepth = 8:
+    accTest = 91.52%, accTrain = 94.46%, buildTime = 0.38s
+  n = 200, d = 5, s = 10, k = 10, maxDepth = 8:
+    accTest = 90.94%, accTrain = 93.71%, buildTime = 0.51s
+  n = 200, d = 5, s = 12, k = 10, maxDepth = 8:
+    accTest = 90.94%, accTrain = 93.96%, buildTime = 0.60s
+  n = 200, d = 5, s = 14, k = 10, maxDepth = 8:
+    accTest = 90.94%, accTrain = 94.13%, buildTime = 0.54s
+  n = 200, d = 5, s = 16, k = 10, maxDepth = 8:
+    accTest = 88.63%, accTrain = 92.89%, buildTime = 0.61s
+  n = 200, d = 5, s = 18, k = 10, maxDepth = 8:
+    accTest = 90.94%, accTrain = 93.88%, buildTime = 0.87s
+  n = 200, d = 5, s = 20, k = 10, maxDepth = 8:
+    accTest = 88.25%, accTrain = 91.98%, buildTime = 0.81s
+
+  Change k, keep other parameters
+  n = 200, d = 5, s = 10, k = 10, maxDepth = 8:
+    accTest = 90.17%, accTrain = 94.13%, buildTime = 0.42s
+  n = 200, d = 5, s = 10, k = 20, maxDepth = 8:
+    accTest = 90.37%, accTrain = 95.45%, buildTime = 1.08s
+  n = 200, d = 5, s = 10, k = 30, maxDepth = 8:
+    accTest = 92.29%, accTrain = 96.28%, buildTime = 1.42s
+  n = 200, d = 5, s = 10, k = 40, maxDepth = 8:
+    accTest = 93.64%, accTrain = 96.03%, buildTime = 1.88s
+  n = 200, d = 5, s = 10, k = 50, maxDepth = 8:
+    accTest = 93.83%, accTrain = 96.53%, buildTime = 2.36s
+  n = 200, d = 5, s = 10, k = 60, maxDepth = 8:
+    accTest = 91.14%, accTrain = 96.36%, buildTime = 2.84s
+  n = 200, d = 5, s = 10, k = 70, maxDepth = 8:
+    accTest = 92.87%, accTrain = 96.61%, buildTime = 3.25s
+  n = 200, d = 5, s = 10, k = 80, maxDepth = 8:
+    accTest = 93.45%, accTrain = 97.85%, buildTime = 3.77s
+  n = 200, d = 5, s = 10, k = 90, maxDepth = 8:
+    accTest = 92.87%, accTrain = 95.86%, buildTime = 4.31s
+  n = 200, d = 5, s = 10, k = 100, maxDepth = 8:
+    accTest = 92.68%, accTrain = 97.27%, buildTime = 4.90s
 ```
 ## 6. References
 1. [Sebastian Mantey's repository](https://github.com/SebastianMantey/Random-Forest-from-Scratch)
