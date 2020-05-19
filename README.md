@@ -26,6 +26,8 @@ decision-tree-from-scratch/
 "lug_boot": "small" -> 1, "med" -> 2, "big" -> 3
 "safety": "low" -> 1, "med" -> 2, "high" -> 3
 ```
+- The train-test ratio of the Breast Cancer Dataset is set at 3:1.
+- The train-test ratio of the Car Evaluation Dataset is set at 4:1.
 ## 4. Results on UCI Breast Cancer Wisconsin (Diagnostic) Dataset
 
 ```
