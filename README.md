@@ -130,7 +130,7 @@ Random Forest - Breast Cancer Dataset
 ## 5. Results on UCI Car Evaluation Dataset
 
 ```
-Random Forest - Car Evaluation
+Random Forest - Car Evaluation Dataset
   Maximum bootstrap size (n) is 1209
   Maximum random subspace size (d) is 6
 
