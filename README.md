@@ -6,7 +6,7 @@ Random Forest Algorithm written in Python using NumPy and Pandas. Based on the [
 ```
 decision-tree-from-scratch/
 ├── dataset_files/
-│   ├── breast_cancer.csv   # UCI Breast Cancer Wisconsin (Diagnostic) Dataset
+│   ├── breast_cancer.csv   # UCI Breast Cancer Wisconsin Diagnostic Dataset
 │   └── car_evaluation.csv  # UCI Car Evaluation Dataset
 │
 ├── decisionTree.py         # Decision Tree Algorithm
@@ -212,5 +212,5 @@ Random Forest - Car Evaluation Dataset
 ```
 ## 6. References
 1. [Sebastian Mantey's repository](https://github.com/SebastianMantey/Random-Forest-from-Scratch)
-2. [UCI Breast Cancer Wisconsin (Diagnostic) Dataset](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29)
+2. [UCI Breast Cancer Wisconsin Diagnostic Dataset](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29)
 3. [UCI Car Evaluation Dataset](https://archive.ics.uci.edu/ml/datasets/Car+Evaluation)
