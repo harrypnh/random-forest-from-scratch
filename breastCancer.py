@@ -15,9 +15,7 @@ print("  Maximum random subspace size (d) is {}".format(dataFrameTrain.shape[1] 
 print("\n  Change n, keep other parameters")
 for i in range(10, dataFrameTrain.shape[0] + 1, 50):
     startTime = time.time()
-    randomForest = createRandomForest(dataFrameTrain, bootstrapSize = i,
-                                      randomAttributes = 10, randomSplits = 50,
-                                      forestSize = 30, treeMaxDepth = 3)
+    randomForest = createRandomForest(dataFrameTrain, bootstrapSize = i, randomAttributes = 10, randomSplits = 50, forestSize = 30, treeMaxDepth = 3)
     buildingTime = time.time() - startTime
     randomForestTestResults = randomForestPredictions(dataFrameTest, randomForest)
     accuracyTest = calculateAccuracy(randomForestTestResults, dataFrameTest.iloc[:, -1]) * 100
@@ -31,9 +29,7 @@ for i in range(10, dataFrameTrain.shape[0] + 1, 50):
 print("\n  Change d, keep other parameters")
 for i in range(10, dataFrameTrain.shape[1], 2):
     startTime = time.time()
-    randomForest = createRandomForest(dataFrameTrain, bootstrapSize = 60,
-                                      randomAttributes = i, randomSplits = 50,
-                                      forestSize = 30, treeMaxDepth = 3)
+    randomForest = createRandomForest(dataFrameTrain, bootstrapSize = 60, randomAttributes = i, randomSplits = 50, forestSize = 30, treeMaxDepth = 3)
     buildingTime = time.time() - startTime
     randomForestTestResults = randomForestPredictions(dataFrameTest, randomForest)
     accuracyTest = calculateAccuracy(randomForestTestResults, dataFrameTest.iloc[:, -1]) * 100
@@ -47,9 +43,7 @@ for i in range(10, dataFrameTrain.shape[1], 2):
 print("\n  Change s, keep other parameters")
 for i in range(10, 100 + 1, 10):
     startTime = time.time()
-    randomForest = createRandomForest(dataFrameTrain, bootstrapSize = 60,
-                                      randomAttributes = 10, randomSplits = i,
-                                      forestSize = 30, treeMaxDepth = 3)
+    randomForest = createRandomForest(dataFrameTrain, bootstrapSize = 60, randomAttributes = 10, randomSplits = i, forestSize = 30, treeMaxDepth = 3)
     buildingTime = time.time() - startTime
     randomForestTestResults = randomForestPredictions(dataFrameTest, randomForest)
     accuracyTest = calculateAccuracy(randomForestTestResults, dataFrameTest.iloc[:, -1]) * 100
@@ -63,9 +57,7 @@ for i in range(10, 100 + 1, 10):
 print("\n  Change k, keep other parameters")
 for i in range(10, 100 + 1, 10):
     startTime = time.time()
-    randomForest = createRandomForest(dataFrameTrain, bootstrapSize = 60,
-                                      randomAttributes = 10, randomSplits = 50,
-                                      forestSize = i, treeMaxDepth = 3)
+    randomForest = createRandomForest(dataFrameTrain, bootstrapSize = 60, randomAttributes = 10, randomSplits = 50, forestSize = i, treeMaxDepth = 3)
     buildingTime = time.time() - startTime
     randomForestTestResults = randomForestPredictions(dataFrameTest, randomForest)
     accuracyTest = calculateAccuracy(randomForestTestResults, dataFrameTest.iloc[:, -1]) * 100
