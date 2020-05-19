@@ -1,10 +1,18 @@
+import numpy
+import pandas
 import random
-import time
-from decisionTree import *
+from decisionTree import buildDecisionTree, decisionTreePredictions
 
-def calculateAccuracy(predictedResults, category):
-    resultCorrect = predictedResults == category
-    return resultCorrect.mean()
+def loadData(xTrainFile, xTestFile, yTrainFile, yTestFile):
+    dataFrameTrain = pandas.read_csv(xTrainFile)
+    dataFrameTest = pandas.read_csv(xTestFile)
+    dataLabelTrain = pandas.read_csv(yTrainFile)
+    dataLabelTest = pandas.read_csv(yTestFile)
+    dataFrameTrain = pandas.concat([dataFrameTrain, dataLabelTrain], axis = 1)
+    dataFrameTest = pandas.concat([dataFrameTest, dataLabelTest], axis = 1)
+    dataFrameTrain = dataFrameTrain.rename(columns = {dataFrameTrain.columns[-1]: "category"})
+    dataFrameTest = dataFrameTest.rename(columns = {dataFrameTest.columns[-1]: "category"})
+    return dataFrameTrain, dataFrameTest
 
 def bootstrapSample(dataFrame, bootstrapSize):
     randomIndices = numpy.random.randint(low = 0, high = len(dataFrame), size = bootstrapSize)
@@ -12,7 +20,6 @@ def bootstrapSample(dataFrame, bootstrapSize):
 
 def createRandomForest(dataFrame, bootstrapSize, randomAttributes,
                        randomSplits, forestSize = 20, treeMaxDepth = 1000):
-    startTime = time.time()
     forest = []
     for i in range(forestSize):
         bootstrappedDataFrame = bootstrapSample(dataFrame, bootstrapSize)
@@ -20,7 +27,7 @@ def createRandomForest(dataFrame, bootstrapSize, randomAttributes,
                                          randomAttributes = randomAttributes,
                                          randomSplits = randomSplits)
         forest.append(decisionTree)
-    return forest, time.time() - startTime
+    return forest
 
 def randomForestPredictions(dataFrame, randomForest):
     predictions = {}
@@ -29,3 +36,7 @@ def randomForestPredictions(dataFrame, randomForest):
         predictions[column] = decisionTreePredictions(dataFrame, randomForest[i])
     predictions = pandas.DataFrame(predictions)
     return predictions.mode(axis = 1)[0]
+
+def calculateAccuracy(predictedResults, category):
+    resultCorrect = predictedResults == category
+    return resultCorrect.mean()
