@@ -1,4 +1,4 @@
-# Random Forest From Scratch
+# Random Forest from Scratch
 Random Forest Algorithm written in Python using NumPy and Pandas. Based on the [Decision Tree project](https://github.com/huannpham/decision-tree-from-scratch).
 ## 1. Overview of the Implemention
 The Random Forest algorithm implemented here reuses some functions from the [Decision Tree implementation](https://github.com/huannpham/decision-tree-from-scratch). Generally, it may take different bootstrap sample sizes `n`, different numbers of random features `d` (random subspace sizes), different numbers of random splits `s`, different numbers of decision trees `k`, and different decision tree maximum depths `maxdepth`.
