@@ -1,7 +1,9 @@
 # Random Forest From Scratch
 Random Forest Algorithm written in Python using NumPy and Pandas. Based on the [Decision Tree project](https://github.com/huannpham/decision-tree-from-scratch).
 ## 1. Overview of the Implemention
+The Random Forest algorithm implemented here reuses some functions from the [Decision Tree implementation](https://github.com/huannpham/decision-tree-from-scratch). Generally, it may take different bootstrap sample sizes `n`, different numbers of random features `d` (random subspace sizes), different numbers of random splits `s`, different numbers of decision trees `k`, and different decision tree maximum depths `maxdepth`.
 
+The algorithm is not able to work with datasets containing categorical data natively, so it requires those datasets to be preprocessed such as converting ordinal data into integers. After converting all categorical string values in a dataset to integers, a user can use that dataset with the algorithm.
 ## 2. Repository Structure
 ```
 decision-tree-from-scratch/
@@ -14,22 +16,9 @@ decision-tree-from-scratch/
 ├── breastCancer.py         # Training and Testing on Breast Cancer Wisconsin (Diagnostic) Dataset
 └── carEvaluation.py        # Training and Testing on Car Evaluation Dataset
 ```
-## 3. Testing Specifications
-- 
+## 3. Applying on UCI Breast Cancer Wisconsin (Diagnostic) Dataset
 - There is no preprocessing required for the UCI Breast Cancer Wisconsin (Diagnostic) Dataset.
-- The UCI Car Evalution Dataset will be preprocessed as follows.
-```
-"buying": "low" -> 1, "med" -> 2, "high" -> 3, "vhigh" -> 4
-"maint": "low" -> 1, "med" -> 2, "high" -> 3, "vhigh" -> 4
-"doors": "2" -> 2, "3" -> 3, "4" -> 4, "5more" -> 5
-"persons": "2" -> 2, "4" -> 4, "more" -> 6
-"lug_boot": "small" -> 1, "med" -> 2, "big" -> 3
-"safety": "low" -> 1, "med" -> 2, "high" -> 3
-```
 - The train-test ratio of the Breast Cancer Dataset is set at 3:1.
-- The train-test ratio of the Car Evaluation Dataset is set at 4:1.
-## 4. Results on UCI Breast Cancer Wisconsin (Diagnostic) Dataset
-
 ```
 Random Forest - Breast Cancer Dataset
   Maximum bootstrap size (n) is 427
@@ -123,8 +112,17 @@ Random Forest - Breast Cancer Dataset
   n = 60, d = 10, s = 50, k = 100, maxDepth = 3:
     accTest = 94.37%, accTrain = 96.02%, buildTime = 2.15s
 ```
-## 5. Results on UCI Car Evaluation Dataset
-
+## 4. Applying on UCI Car Evaluation Dataset
+- The UCI Car Evalution Dataset will be preprocessed as follows.
+- The train-test ratio of the Car Evaluation Dataset is set at 4:1.
+```
+"buying": "low" -> 1, "med" -> 2, "high" -> 3, "vhigh" -> 4
+"maint": "low" -> 1, "med" -> 2, "high" -> 3, "vhigh" -> 4
+"doors": "2" -> 2, "3" -> 3, "4" -> 4, "5more" -> 5
+"persons": "2" -> 2, "4" -> 4, "more" -> 6
+"lug_boot": "small" -> 1, "med" -> 2, "big" -> 3
+"safety": "low" -> 1, "med" -> 2, "high" -> 3
+```
 ```
 Random Forest - Car Evaluation Dataset
   Maximum bootstrap size (n) is 1210
@@ -212,7 +210,7 @@ Random Forest - Car Evaluation Dataset
   n = 200, d = 5, s = 10, k = 100, maxDepth = 8:
     accTest = 94.40%, accTrain = 96.78%, buildTime = 4.62s
 ```
-## 6. References
+## 5. References
 1. [Sebastian Mantey's repository](https://github.com/SebastianMantey/Random-Forest-from-Scratch)
 2. [UCI Breast Cancer Wisconsin (Diagnostic) Dataset](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29)
 3. [UCI Car Evaluation Dataset](https://archive.ics.uci.edu/ml/datasets/Car+Evaluation)
