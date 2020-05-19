@@ -1,6 +1,6 @@
 import random
-import time
 import pandas
+import time
 from randomForest import trainTestSplit, createRandomForest, randomForestPredictions, calculateAccuracy
 
 dataFrame = pandas.read_csv("dataset_files/breast_cancer.csv")
