@@ -6,7 +6,7 @@ Random Forest Algorithm written in Python using NumPy and Pandas. Based on the [
 ```
 decision-tree-from-scratch/
 ├── dataset_files/
-│   ├── breast_cancer.csv   # UCI Breast Cancer Wisconsin Diagnostic Dataset
+│   ├── breast_cancer.csv   # UCI Breast Cancer Wisconsin (Diagnostic) Dataset
 │   └── car_evaluation.csv  # UCI Car Evaluation Dataset
 │
 ├── decisionTree.py         # Decision Tree Algorithm
